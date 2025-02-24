@@ -1,137 +1,112 @@
-SLAM Review and Benchmarking
-A repository containing code implementations, benchmarking scripts, and supplementary materials for the paper SLAM Review and Benchmarking.
+# 📌 SLAM Review and Benchmarking
+**A repository for SLAM algorithm benchmarking in GPS-denied environments.**
 
-Table of Contents
-Overview
-Publication
-Installation
-Usage
-Code Structure
-Benchmarking & Evaluation
-Results
-Documentation
-Contributing
-License
-Contact
-References
-Overview
-Provide a brief introduction to the repository:
+This repository contains **benchmarking codes and evaluation results** for various SLAM algorithms tested under **GPS-denied and enclosed environments (EGD)**. The study investigates **vision-based, LiDAR-based, and LiDAR-vision fusion methods** for robotic infrastructure inspection.
 
-Objective: Summarize the goals behind the SLAM review and benchmarking.
-Scope: Outline what is included (code, benchmarks, experimental setups, etc.).
-Key Features: Highlight any notable methods, experiments, or comparisons.
-Publication
-Link to and cite the original paper:
+---
 
-Title: SLAM Review and Benchmarking
-Journal: Sensors
-Link: MDPI Article
-Abstract: (Include a short summary or abstract excerpt from the paper)
-Installation
-Instructions to set up the environment:
+## 💑 Publication
+- 📝 **Title:** A Review of Simultaneous Localization and Mapping for the Robotic-Based Nondestructive Evaluation of Infrastructures
+- 📚 **Journal:** Sensors
+- 🔗 **[Read the Full Paper](https://www.mdpi.com/1424-8220/25/3/712)**
 
-Dependencies: List necessary libraries and tools.
-Installation Steps: Provide command line instructions or scripts.
-Platform Support: Mention any platform-specific requirements.
-Usage
-Guidelines on how to run the code:
+---
 
-Examples: Walk through example commands and expected outputs.
-Parameters: Document the configurable options.
-Demo: If available, link to a demo video or interactive session.
-Code Structure
-Overview of repository organization:
+## 📂 Repository Structure
+```
+├── benchmark_scripts/    # Code for SLAM evaluation
+│   ├── vins_mono.py
+│   ├── orb_slam2.py
+│   ├── lio_sam.py
+│   ├── fast_lio2.py
+│   ├── aloam.py
+│   ├── final.py
+│
+├── datasets/             # Dataset files used for benchmarking
+│   ├── mine_dataset/
+│
+├── results/              # Benchmarking results & visualizations
+│   ├── cpu_usage.png
+│   ├── ground_truth_trajectory.png
+│   ├── aft_mapped_path.csv
+│
+├── docs/                 # Documentation
+│   ├── methodology.md
+│   ├── SLAM_algorithms_review.md
+│
+├── LICENSE
+├── README.md             # Overview of the repository
+```
 
-Directory Layout: Explain the purpose of key directories (e.g., src/, benchmarks/, scripts/, etc.).
-Modular Components: Detail the main modules or classes implemented.
-Configuration Files: Describe any important configuration or environment files.
-Benchmarking & Evaluation
-Describe how the benchmarking is set up:
+---
 
-SLAM Review and Benchmarking
-A repository containing code implementations, benchmarking scripts, and supplementary materials for the paper SLAM Review and Benchmarking.
+<h3 style="color:blue;">🔹 SLAM Algorithms Evaluated</h3>
 
-Table of Contents
-Overview
-Publication
-Installation
-Usage
-Code Structure
-Benchmarking & Evaluation
-Results
-Documentation
-Contributing
-License
-Contact
-References
-Overview
-Provide a brief introduction to the repository:
+This study benchmarks the following **SLAM methods**:
 
-Objective: Summarize the goals behind the SLAM review and benchmarking.
-Scope: Outline what is included (code, benchmarks, experimental setups, etc.).
-Key Features: Highlight any notable methods, experiments, or comparisons.
-Publication
-Link to and cite the original paper:
+| **Algorithm**  | **Type** | **Sensor Modality** |
+|---------------|----------|--------------------|
+| ORB-SLAM2     | Visual   | Monocular, Stereo, RGB-D |
+| VINS-Mono     | Visual   | Monocular Camera IMU  |
+| LIO-SAM       | LiDAR    | LiDAR + IMU       |
+| Fast-LIO2     | LiDAR    | LiDAR + IMU       |
+| A-LOAM        | LiDAR    | LiDAR + IMU       |
+| LVI-SAM       | Fusion   | LiDAR + Camera + IMU |
+| LINS          | LiDAR    | LiDAR + IMU       |
+| LEGO-LOAM     | LiDAR    | LiDAR + IMU |
+| SC-LEGO-LOAM  | LiDAR    | LiDAR + IMU |
+| SC-FAST-LIO   | LiDAR    | LiDAR + IMU |
+| F-LOAM        | LiDAR    | LiDAR + IMU |
 
-Title: SLAM Review and Benchmarking
-Journal: Sensors
-Link: MDPI Article
-Abstract: (Include a short summary or abstract excerpt from the paper)
-Installation
-Instructions to set up the environment:
+---
 
-Dependencies: List necessary libraries and tools.
-Installation Steps: Provide command line instructions or scripts.
-Platform Support: Mention any platform-specific requirements.
-Usage
-Guidelines on how to run the code:
+## 📊 Results
 
-Examples: Walk through example commands and expected outputs.
-Parameters: Document the configurable options.
-Demo: If available, link to a demo video or interactive session.
-Code Structure
-Overview of repository organization:
+<h3 style="color:green;">📌 Trajectory Error Comparison</h3>
+The results include:
+- **Accuracy Comparisons:** RMSE plots showing SLAM accuracy
+- **Computational Resource Consumption:** Memory and CPU usage and runtime benchmarks
+- **Visualizations:** 3D trajectory plots
 
-Directory Layout: Explain the purpose of key directories (e.g., src/, benchmarks/, scripts/, etc.).
-Modular Components: Detail the main modules or classes implemented.
-Configuration Files: Describe any important configuration or environment files.
-Benchmarking & Evaluation
-Describe how the benchmarking is set up:
+### **Example Visualizations**
+<p><span style="font-size:18px; font-weight:bold;">🔹 Accuracy Comparison:</span></p>
 
-Experimental Setup: Explain the benchmarking protocols and datasets used.
-Metrics: Define the evaluation metrics (e.g., accuracy, runtime, robustness).
-Reproducibility: Instructions for replicating the experiments.
-Results
-Present key results and findings:
+<div align="center">
+<img src="results/lidar-accuracy.png" alt="LiDAR-based accuracy" width="400">
+<img src="results/vision-accuracy.png" alt="Vision-based accuracy" width="400">
+<img src="results/trans-err.png" alt="trans-err" width="400">
+</div>
 
-Graphs & Tables: Embed or link to visualizations of the benchmark results.
-Discussion: Provide a short discussion on the performance and comparison of methods.
-Logs/Reports: Option to link to detailed log files or report documents.
-Documentation
-Provide additional documentation:
 
-API Docs: Link to auto-generated documentation if available.
-Tutorials: Step-by-step guides or Jupyter notebooks for new users.
-FAQ: Answers to common questions or troubleshooting tips.
-Contributing
-Guidelines for external contributions:
+<p><span style="font-size:18px; font-weight:bold;">🔹 Dataset Collection Device:</span></p>
 
-Contribution Process: How to open issues, submit pull requests, or suggest improvements.
-Code Style: Mention any coding standards or style guidelines.
-Review Process: Describe the process for reviewing and merging contributions.
-License
-Specify the licensing information:
+<div align="center">
+<img src="datasets/device.png" alt="Accuracy Plot" width="400">
+</div>
 
-License Type: e.g., MIT, Apache-2.0, etc.
-Copyright Notice: Include any copyright or usage details.
-Contact
-Provide your contact information for further inquiries:
 
-Author Name: Your Name
-Email: Your Email (or preferred contact method)
-Additional Links: Link to your website or professional profiles (optional)
-References
-Include citations for key references and related work:
+📌 **More detailed results can be found in the results section of the corresponding paper.**
 
-Primary Paper: Your SLAM review and benchmarking article.
-Additional Resources: Any other academic or technical resources that were referenced.
+---
+
+## 🚀 How to Use This Repository
+Since this repository **only contains benchmarking codes**, there are no installation steps required. However, to **reproduce the benchmarking results**, follow these steps:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/ali-qdmz/A-Review-of-SLAM-and-Benchmarking.git
+   cd A-Review-of-SLAM-and-Benchmarking
+   ```
+2. Run the relevant SLAM benchmarking script:
+   ```bash
+   python benchmark_scripts/orb_slam2.py
+   ```
+
+## 📩 Contact
+For any questions or collaboration opportunities, feel free to reach out:
+
+👤 **Ali Ghadimzadeh Alamdari**  
+📧 **[ali.ghadimzadeh@gmail.com]**  
+🔗 **[[LinkedIn](https://www.linkedin.com/in/ali-ghadimzadeh-38b12217a/)]**  
+
+---
