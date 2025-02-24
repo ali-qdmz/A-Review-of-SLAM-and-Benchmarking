@@ -1,4 +1,4 @@
-# 📌 SLAM Review and Benchmarking
+# 📌 A Review and Benchmarking of Simultaneous Localization and Mapping for the Robotic-Based Nondestructive Evaluation of Infrastructures
 **A repository for SLAM algorithm benchmarking in GPS-denied environments.**
 
 This repository contains **benchmarking codes and evaluation results** for various SLAM algorithms tested under **GPS-denied and enclosed environments (EGD)**. The study investigates **vision-based, LiDAR-based, and LiDAR-vision fusion methods** for robotic infrastructure inspection.
