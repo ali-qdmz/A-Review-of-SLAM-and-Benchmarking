@@ -12,33 +12,6 @@ This repository contains **benchmarking codes and evaluation results** for vario
 
 ---
 
-## 📂 Repository Structure
-```
-├── benchmark_scripts/    # Code for SLAM evaluation
-│   ├── vins_mono.py
-│   ├── orb_slam2.py
-│   ├── lio_sam.py
-│   ├── fast_lio2.py
-│   ├── aloam.py
-│   ├── final.py
-│
-├── datasets/             # Dataset files used for benchmarking
-│   ├── mine_dataset/
-│
-├── results/              # Benchmarking results & visualizations
-│   ├── cpu_usage.png
-│   ├── ground_truth_trajectory.png
-│   ├── aft_mapped_path.csv
-│
-├── docs/                 # Documentation
-│   ├── methodology.md
-│   ├── SLAM_algorithms_review.md
-│
-├── LICENSE
-├── README.md             # Overview of the repository
-```
-
----
 
 <h3 style="color:blue;">🔹 SLAM Algorithms Evaluated</h3>
 
@@ -77,12 +50,18 @@ The results include:
 <img src="results/trans-err.png" alt="trans-err" width="400">
 </div>
 
+<p><span style="font-size:18px; font-weight:bold;">🔹 Dataset Collection results:</span></p>
+
+<div align="center">
+<img src="results/lidar-vision.png" alt="Dataset Collection results" width="600">
+</div>
 
 <p><span style="font-size:18px; font-weight:bold;">🔹 Dataset Collection Device:</span></p>
 
 <div align="center">
 <img src="datasets/device.png" alt="Accuracy Plot" width="400">
 </div>
+
 
 
 📌 **More detailed results can be found in the results section of the corresponding paper.**
@@ -107,6 +86,5 @@ For any questions or collaboration opportunities, feel free to reach out:
 
 👤 **Ali Ghadimzadeh Alamdari**  
 📧 **[ali.ghadimzadeh@gmail.com]**  
-🔗 **[[LinkedIn](https://www.linkedin.com/in/ali-ghadimzadeh-38b12217a/)]**  
-
+🔗 **[[LinkedIn](https://www.linkedin.com/in/ali-ghadimzadeh-38b12217a/)]** 
 ---
