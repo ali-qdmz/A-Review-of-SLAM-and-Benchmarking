@@ -5,7 +5,7 @@ This repository contains **benchmarking codes and evaluation results** for vario
 
 ---
 
-## 💑 Publication
+## 📝 Publication
 - 📝 **Title:** A Review of Simultaneous Localization and Mapping for the Robotic-Based Nondestructive Evaluation of Infrastructures
 - 📚 **Journal:** Sensors
 - 🔗 **[Read the Full Paper](https://www.mdpi.com/1424-8220/25/3/712)**
