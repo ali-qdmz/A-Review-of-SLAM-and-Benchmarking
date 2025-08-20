@@ -81,6 +81,12 @@ Since this repository **only contains benchmarking codes**, there are no install
    python benchmark_scripts/orb_slam2.py
    ```
 
+
+<div align="center">
+<video src="https://github.com/user-attachments/assets/24a7302d-f73c-4b32-8e4d-f84fa3beb374" width="352" height="720"></video>
+</div>
+
+
 ## 📩 Contact
 For any questions or collaboration opportunities, feel free to reach out:
 
